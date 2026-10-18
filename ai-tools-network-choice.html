@@ -146,7 +146,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>AI 的回答是边生成边显示的（OpenAI 的 API 文档写明，流式回答通过 server-sent events 传输），一整段回答期间连接都要保持住。这种用法怕的是中途断，峰值速度反而没那么要紧：</p>
 <ul>
 <li><strong>看晚高峰。</strong> 晚上 8 点到 11 点是线路容易变差的时段，白天测得好，晚上不一定也好。</li>
-<li><strong>看卡顿和丢包。</strong> 选线时可以参考的标准是：晚高峰不能出现 ≥1 秒的卡顿，每 8 个包最多丢 1 个。你自己测时也可以用这把尺子。</li>
+<li><strong>看卡顿和丢包。</strong> 选线时可以参考的门槛，举例：晚高峰不能出现 ≥1 秒的卡顿，每 8 个包最多丢 1 个。你自己测时也可以用这把尺子。</li>
 <li><strong>电信、联通、移动分开看。</strong> 同一个地区，不同运营商走的路由不一样，所以线路名里写明了适合哪家运营商。</li>
 </ul>
 <p>长时间开着的编程助手对网络要求更高，单独写在 <a href="coding-tools-network.html">编程助手长时间工作，网络要满足哪些条件</a>。</p>
