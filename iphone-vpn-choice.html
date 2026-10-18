@@ -22,7 +22,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
 <h1>iPhone VPN 怎么选：协议、客户端和额外费用</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/iphone-vpn-choice/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
-<p><strong>iPhone 上用订阅式服务，要另装支持该协议的第三方客户端。我们 2026-10-11 查的四个常用客户端，大陆区 App Store 都搜不到；有的免费，有的一次性付费。</strong></p>
+<p><strong>iPhone 上用订阅式服务，要另装支持该协议的第三方客户端。我们 2026-10-11 查的四个常用客户端，大陆区 App Store 都搜不到，有的免费，有的一次性付费。</strong></p>
 <p>这篇讲选型：客户端要不要钱、在哪个商店能下、支不支持你买的协议、后台和耗电怎么核对。安装和导入步骤不在这里写，见<a href="https://dengyue.xyz/help">帮助中心</a>。</p>
 <h3>先分清两种形态</h3>
 <table>
@@ -47,7 +47,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tbody>
 </table>
 <p>登月VPN 属于第二种。</p>
-<p>为什么上架地区是个问题：Apple 的 App 审核指南第 5.4 条规定，提供 VPN 服务的 App 必须使用系统的 NEVPNManager 接口，只能由以组织身份注册的开发者提供，不得违反当地法律；如果开发者选择在要求 VPN 许可的地区上架，必须在审核备注里提供许可信息（2026-10-11 核对）。另一方面，我们 2026-10-11 用 Apple 官方查询接口核对，下文四个客户端在美区、香港区、日本区都能查到，在中国大陆区都查不到。</p>
+<p>为什么上架地区是个问题：Apple 的 App 审核指南第 5.4 条规定，提供 VPN 服务的 App 必须使用系统的 NEVPNManager 接口，只能由以组织身份注册的开发者提供，不得违反当地法律。如果开发者选择在要求 VPN 许可的地区上架，必须在审核备注里提供许可信息（2026-10-11 核对）。另一方面，我们 2026-10-11 用 Apple 官方查询接口核对，下文四个客户端在美区、香港区、日本区都能查到，在中国大陆区都查不到。</p>
 <h3>登月VPN 官网列出的四个 iPhone 客户端</h3>
 <p>登月VPN 的线路使用 <strong>VLESS + REALITY</strong> 协议，客户端必须支持它。官网帮助中心目前为 iPhone / iPad 列出了 Karing、Shadowrocket、Quantumult X 和 sing-box。</p>
 <p>下面是我们 2026 年 10 月 11 日用 Apple 官方查询接口和 App Store 页面核对的结果：</p>
@@ -74,7 +74,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <td>免费</td>
 <td>搜不到</td>
 <td>15.0</td>
-<td>官方文档写明需要「中国大陆以外的 Apple 账户」；App Store 上的名称是 sing-box MT</td>
+<td>官方文档写明需要「中国大陆以外的 Apple 账户」，App Store 上的名称是 sing-box MT</td>
 </tr>
 <tr>
 <td>Shadowrocket</td>
@@ -94,14 +94,14 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </table>
 <p>几点说明：</p>
 <ul>
-<li><strong>价格按地区不同。</strong> 同一天，Shadowrocket 在香港区是 22 港元、日本区 500 日元；Quantumult X 在香港区 88 港元、日本区 1500 日元。以你所用地区的 App Store 页面为准。</li>
+<li><strong>价格按地区不同。</strong> 同一天，Shadowrocket 在香港区是 22 港元、日本区 500 日元。Quantumult X 在香港区 88 港元、日本区 1500 日元。以你所用地区的 App Store 页面为准。</li>
 <li><strong>美元价格只是 App Store 标价。</strong> Apple 不收 USDT，按 1:1 粗算约等于同额 USDT，实际以你的付款方式结算为准。</li>
-<li><strong>内购以页面为准。</strong> 我们核对时，这四个 App Store 页面上都没有显示内购清单；以后有没有，以你下载时的页面为准。</li>
-<li><strong>「官网列出」不等于「逐版验证过」。</strong> 客户端会更新，界面和兼容性可能变化。我们会持续核对，遇到问题请按帮助中心的说明操作。</li>
+<li><strong>内购以页面为准。</strong> 我们核对时，这四个 App Store 页面上都没有显示内购清单，以后有没有，以你下载时的页面为准。</li>
+<li><strong>「官网列出」的客户端，没有逐版验证过。</strong> 客户端会更新，界面和兼容性可能变化。我们会持续核对，遇到问题请按帮助中心的说明操作。</li>
 </ul>
 <h3>选客户端，看这四项</h3>
 <p><strong>1. 协议。</strong> 先确认服务商用什么协议，再看客户端支不支持。举个反例：Surge 是一款常见的 iPhone 网络工具，但它的官方文档里列出的代理协议没有 VLESS，也没有 REALITY（2026-10-11 核对），所以不能用来连登月VPN。我们因此把它从官网推荐里撤了下来。</p>
-<p><strong>2. 费用。</strong> 免费的 Karing、sing-box 够用；Shadowrocket、Quantumult X 是一次性付费。付费不代表连接更快，快慢主要看线路本身。如果你已经买过其中一款，继续用就行。</p>
+<p><strong>2. 费用。</strong> 免费的 Karing、sing-box 够用。Shadowrocket、Quantumult X 是一次性付费。连接快不快，主要看线路本身。如果你已经买过其中一款，继续用就行。</p>
 <p><strong>3. 下载地区。</strong> 这四个客户端在大陆区 App Store 都搜不到，需要用其他国家或地区的 Apple 账户下载。Apple 的帮助页说明，更改账户地区前要先花完账户余额、取消会阻止更改的订阅，并准备好新地区可用的付款方式（2026-10-11 核对）。付费客户端要用对应地区的付款方式买，这一点会影响你选免费还是付费的。</p>
 <p><strong>4. 系统版本。</strong> 表里的最低版本是 App Store 页面上写的。旧 iPhone 升不到 iOS 15，选择就只剩支持更老系统的那一款。</p>
 <h3>后台和耗电怎么核对</h3>
@@ -118,7 +118,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li>套餐允许几台设备同时在线？</li>
 <li>有没有月付或试用，让你先在 iPhone 上用几个晚上？</li>
 </ul>
-<p>还没决定买哪种服务，可以先看<a href="vpn-selection.html">VPN 怎么选</a>。登月VPN 的 500G 套餐一份订阅可在 iPhone、电脑等最多 3 台设备同时用，线路按电信、联通、移动分开，选和你宽带一致的那条，按交易所选线见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>；价格见<a href="https://dengyue.xyz/pricing">套餐页</a>，iPhone 上的导入步骤见<a href="https://dengyue.xyz/help">帮助中心</a>。</p>
+<p>还没决定买哪种服务，可以先看<a href="vpn-selection.html">VPN 怎么选</a>。登月VPN 的 500G 套餐一份订阅可在 iPhone、电脑等最多 3 台设备同时用，线路按电信、联通、移动分开，选和你宽带一致的那条，按交易所选线见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>。价格见<a href="https://dengyue.xyz/pricing">套餐页</a>，iPhone 上的导入步骤见<a href="https://dengyue.xyz/help">帮助中心</a>。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
 </body></html>
