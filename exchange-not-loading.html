@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>交易所打不开、网络异常：先判断是线路还是平台 | 登月VPN 技术笔记</title>
-<meta name="description" content="交易所打不开先看提示：IP 受限多半是出口地区问题，换推荐线路；500、维护是平台故障；转圈超时才是网络。附三步判断法。">
+<meta name="description" content="交易所打不开先看提示：IP 受限多半是出口地区问题，换推荐线路。500、维护是平台故障，转圈超时才是网络。附三步判断法。">
 <link rel="canonical" href="https://dengyue.xyz/blog/exchange-not-loading/">
 <link rel="icon" href="icon.png" type="image/png">
 <meta name="theme-color" content="#6554f5">
@@ -22,7 +22,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
 <h1>交易所打不开、网络异常：先判断是线路还是平台</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/exchange-not-loading/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
-<p><strong>交易所打不开，先看提示：「IP 受限」「地区不支持」多半是当前线路的出口地区不合适，换到推荐线路；500、服务不可用、维护是平台临时故障，等恢复；转圈、超时、「网络异常」才是网络问题，再往下查。</strong></p>
+<p><strong>交易所打不开，先看提示：「IP 受限」「地区不支持」多半是当前线路的出口地区不合适，换到推荐线路。500、服务不可用、维护是平台临时故障，等恢复。转圈、超时、「网络异常」才是网络问题，再往下查。</strong></p>
 <p>分清这三类，能少走很多弯路。</p>
 <h3>第一步：按提示类型分</h3>
 <table>
@@ -51,16 +51,16 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p><strong>IP 受限、地区不支持。</strong> 交易所看到的是你的出口 IP 在哪个国家。用了线路服务，出口就在线路所在的地区。同一家交易所，换一个出口地区，提示可能就不一样了。各家推荐哪些地区的线路，按运营商列在 <a href="exchange-route-choice.html">交易所用哪条线路：10 家交易所按电信、联通、移动选线</a>；Bybit、Bitget 的情况单独见 <a href="bybit-bitget-ip-restricted.html">Bybit、Bitget 提示 IP 受限怎么办</a>。</p>
+<p><strong>IP 受限、地区不支持。</strong> 交易所看到的是你的出口 IP 在哪个国家。用了线路服务，出口就在线路所在的地区。同一家交易所，换一个出口地区，提示可能就不一样了。各家推荐哪些地区的线路，按运营商列在 <a href="exchange-route-choice.html">交易所用哪条线路：10 家交易所按电信、联通、移动选线</a>。Bybit、Bitget 的情况单独见 <a href="bybit-bitget-ip-restricted.html">Bybit、Bitget 提示 IP 受限怎么办</a>。</p>
 <p><strong>500 或服务不可用。</strong> 平台那边出问题，用户这边换什么网络都没用。一个公开的例子：KuCoin 2025 年 12 月 5 日 17:33 发布公告，说部分地区用户访问时可能遇到「500 errors」或临时连接问题，原因是其外部服务商的临时故障，账户和资产安全不受影响（<a href="https://www.kucoin.com/announcement/en-announcement-regarding-network-access-issues-in-some-regions">公告原文</a>）。同日的<a href="https://www.kucoin.com/announcement/en-network-recovery-notification">恢复通知</a>写明，这次波动从 16:49（UTC+8）开始，17:15 已经全部恢复。两页均于 2026-10-11 核对。</p>
 <p><strong>转圈、超时、「网络异常」。</strong> 这一类才值得去查网络。但它也可能是平台局部故障，所以要接着做第二步。</p>
 <h3>第二步：先看官方，再做同时段对照</h3>
 <ol>
-<li><strong>看官方公告和状态页。</strong> 有的交易所有独立状态页，比如 <a href="https://status.kraken.com/">Kraken Status</a> 和 <a href="https://www.okx.com/status">OKX Status</a>；币安的维护通知发在帮助中心的公告栏里。公告里写了维护或故障，就不用再查自己的网络。</li>
+<li><strong>看官方公告和状态页。</strong> 有的交易所有独立状态页，比如 <a href="https://status.kraken.com/">Kraken Status</a> 和 <a href="https://www.okx.com/status">OKX Status</a>。币安的维护通知发在帮助中心的公告栏里。公告里写了维护或故障，就不用再查自己的网络。</li>
 <li><strong>同一时间换一个网络打开。</strong> 手机在 Wi-Fi 和流量之间切换，或者家里宽带和手机热点各试一次。欧易帮助中心的排障文章就建议这样做：Try switching networks (for example, from mobile data to Wi-Fi, or vice versa)（<a href="https://www.okx.com/help/how-can-i-troubleshoot-web-or-app-issues">原页</a>，2026-10-11 核对）。</li>
 <li><strong>换一条线路对照。</strong> 同一时间换到另一条推荐线路打开同一个页面，能分清是这条线路的问题，还是平台的问题。</li>
 </ol>
-<p>判断方法很简单：<strong>同一时刻，换一个网络或线路就好了，问题在原来那条上；换了几个都打不开，问题多半在平台。</strong></p>
+<p>判断方法很简单：<strong>同一时刻，换一个网络或线路就好了，问题在原来那条上。换了几个都打不开，问题多半在平台。</strong></p>
 <h3>第三步：看是不是只在晚上 8 点到 11 点出问题</h3>
 <p>白天正常、一到晚上就转圈，最常见的原因是晚高峰拥堵。</p>
 <ul>
@@ -91,13 +91,13 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 <tr>
 <td>网络问题，全天都有</td>
-<td>先排查本地网络和设备；用的是线路服务，联系服务商</td>
+<td>先排查本地网络和设备，用线路服务的再联系服务商</td>
 </tr>
 </tbody>
 </table>
-<p>换好线路之后，账户和地区规则以平台为准，固定一个出口国家、少来回切换最稳妥。客户端里的「自动选择」「负载均衡」会在不同国家之间自动跳，用交易所时建议关掉，手动选定一条。</p>
+<p>换好线路之后，账户和地区规则以平台为准，固定一个出口国家、少来回切换更稳。客户端里的「自动选择」「负载均衡」会在不同国家之间自动跳，用交易所时建议关掉，手动选定一条。</p>
 <h3>登月VPN 用户遇到问题</h3>
-<p>客户端怎么设置、连接报错怎么修，看<a href="https://dengyue.xyz/help">官网帮助中心</a>。各家交易所按电信、联通、移动该选哪条线，见 <a href="exchange-route-choice.html">交易所用哪条线路</a>；套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>。</p>
+<p>客户端怎么设置、连接报错怎么修，看<a href="https://dengyue.xyz/help">官网帮助中心</a>。各家交易所按电信、联通、移动该选哪条线，见 <a href="exchange-route-choice.html">交易所用哪条线路</a>。套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>。</p>
 <p>登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务，所有线路都是直连，服务器就在线路名写的那个地区。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
