@@ -22,7 +22,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
 <h1>机房 IP、住宅 IP、原生 IP 有什么区别，买之前该看哪一项</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/ip-type-choice/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
-<p><strong>机房 IP 是数据中心服务器的地址，住宅 IP 是宽带运营商分给住户的地址。「原生 IP」不是标准术语，一般指登记国家和定位国家一致。三种都是数据库的判断。</strong></p>
+<p><strong>机房 IP 是数据中心服务器的地址，住宅 IP 是宽带运营商分给住户的地址。「原生 IP」没有统一的标准定义，一般指登记国家和定位国家一致。三种都是数据库的判断。</strong></p>
 <p>下面分三步讲：这几个词分别对应数据库里的哪一项，它们对你选服务有多大影响，以及怎么自己查。</p>
 <h3>三个词各指什么</h3>
 <p>先分清一件事：一个 IP「是什么类型」，没有一个全球统一的权威答案。你在各种查询网站上看到的「机房」「住宅」「原生」，都来自商业 IP 数据库的判断，比如 MaxMind 和 IPinfo。</p>
@@ -74,11 +74,11 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <h3>这对你的购买选择有什么影响</h3>
 <p><strong>大多数人：IP 类型排在后面，先看晚高峰稳不稳。</strong> 看网页、看视频、开会、看行情，用的是机房 IP 还是住宅 IP，体验上差别主要来自线路本身。判断线路稳不稳，参考<a href="stable-vpn-selection.html">稳定 VPN 推荐怎么看</a>。</p>
 <p><strong>在意「定位国家」的人：查 <code>country</code>，别只听「原生」两个字。</strong> 如果某个网站按 IP 判断你在哪个国家，它用的也是某家数据库。买之前问清楚：出口在哪个国家、IP 归哪个 ASN。买之后自己查一次（方法见下一节）。</p>
-<p><strong>想买「住宅 IP」的人：先想清楚住宅 IP 从哪里来。</strong> 真正的住宅 IP 是宽带运营商分给住户的，服务商要拿到它，只能通过和运营商合作，或者借用别人家的网络。MaxMind 专门有一个标记，叫「住宅代理」（<code>is_residential_proxy</code>），定义是：IP 属于住宅宽带运营商，但处在疑似匿名化的网络上。也就是说，「住宅 IP」做成了代理服务，数据库也可能识别出来。这类服务的价格、来源和条款要单独核对，不能只看「住宅」两个字。</p>
-<p><strong>用交易所、AI 工具的人：出口国家选对、选定后别乱换，比 IP 标签重要。</strong> 交易所按「交易所 × 你的运营商」选线，见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>。AI 工具选该服务官方支持地区的出口，比如日本、韩国（香港不在 OpenAI、Anthropic 的支持名单里），见<a href="ai-tools-network-choice.html">使用 AI 工具怎么选网络</a>。账户和地区规则以平台为准，固定一个出口国家、少来回切换最稳妥。</p>
+<p><strong>想买「住宅 IP」的人：先想清楚住宅 IP 从哪里来。</strong> 住宅 IP 本来是宽带运营商分给住户的，服务商要拿到它，只能通过和运营商合作，或者借用别人家的网络。MaxMind 专门有一个标记，叫「住宅代理」（<code>is_residential_proxy</code>），定义是：IP 属于住宅宽带运营商，但处在疑似匿名化的网络上。也就是说，「住宅 IP」做成了代理服务，数据库也可能识别出来。这类服务的价格、来源和条款要单独核对，不能只看「住宅」两个字。</p>
+<p><strong>用交易所、AI 工具的人：出口国家选对、选定后别乱换，比 IP 标签重要。</strong> 交易所按「交易所 × 你的运营商」选线，见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>。AI 工具选该服务官方支持地区的出口，比如日本、韩国（香港不在 OpenAI、Anthropic 的支持名单里），见<a href="ai-tools-network-choice.html">使用 AI 工具怎么选网络</a>。账户和地区规则以平台为准，固定一个出口国家、少来回切换更稳。</p>
 <h3>登月VPN 线路的出口是怎么回事</h3>
 <p>登月VPN 的线路都是直连：服务器放在线路名所标的国家，不中转。线路名里不加「原生」「家宽」这类标签，按我们的命名规则，这类标签只有在核实过之后才会加上。</p>
-<p>每条线路的出口 IP 固定，不在多个国家之间自动切换。这个 IP 由使用这条线路的多位用户共用，不是独享。只要你不换线路，网站每次看到的都是同一个出口国家。</p>
+<p>每条线路的出口 IP 固定，不在多个国家之间自动切换。这个 IP 由使用这条线路的多位用户共用，属于共享 IP。只要你不换线路，网站每次看到的都是同一个出口国家。</p>
 <p>每条线路的出口国家写在线路名里，比如「韩国【电信直连】01」的出口在韩国。数据库把它判成哪个国家，你可以用下面的方法自己查。线路名里还写着这条线给哪家运营商用（电信、联通或移动直连），选和你家宽带一致的那条。全部线路见<a href="https://dengyue.xyz/regions">线路页</a>。</p>
 <p>如果你需要的是「出口 IP 固定不变」，那是另一个问题，见<a href="static-ip-need.html">什么情况需要固定 IP</a>。如果你在比较「一个人用」还是「多人共用」，见<a href="dedicated-shared-ip.html">独享 IP 和共享 IP 怎么选</a>。</p>
 <h3>自己怎么核对一个 IP</h3>
@@ -92,9 +92,9 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>查的时候注意两点：数据库给的是概率判断，MaxMind 文档说经纬度不精确，不应用来定位具体住址。另外，查一次只说明这一刻，过一个月可以再查一次。</p>
 <h3>哪些结论不能从 IP 标签推出来</h3>
 <ul>
-<li>「住宅 IP」不等于速度快、晚高峰稳。</li>
-<li>「原生 IP」不等于某个平台一定能用。</li>
-<li>「机房 IP」不等于会被封。网站弹验证码、限制访问，也可能来自同一 IP 上其他人的行为，Google 的帮助页就列过这种情况，见<a href="dedicated-shared-ip.html">独享 IP 和共享 IP 怎么选</a>。</li>
+<li>「住宅 IP」只是个标签，速度快不快、晚高峰稳不稳要另外测。</li>
+<li>「原生 IP」只是个标签，某个平台能不能用要看平台自己的判断。</li>
+<li>「机房 IP」不一定会被封。网站弹验证码、限制访问，也可能来自同一 IP 上其他人的行为，Google 的帮助页就列过这种情况，见<a href="dedicated-shared-ip.html">独享 IP 和共享 IP 怎么选</a>。</li>
 <li>查询网站显示的「风险分」「欺诈分」是各家自己的算法，没有统一标准。</li>
 </ul>
 <p>想要一个出口国家明确、按运营商分好线路的服务，可以看看登月VPN 的<a href="https://dengyue.xyz/pricing">套餐页</a>。已经在用、遇到连接问题，请看<a href="https://dengyue.xyz/help">帮助中心</a>。</p>
