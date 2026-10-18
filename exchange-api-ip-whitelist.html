@@ -27,7 +27,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>先看交易所怎么规定，再比较两种做法。</p>
 <h3>各家对 API 白名单怎么规定</h3>
 <p>以下均为官方页面原文要点，2026-10-11 核对。</p>
-<p><strong>币安。</strong> 帮助中心《<a href="https://www.binance.com/en/support/faq/360002502072">How to Create API Keys on Binance?</a>》（页面写最后更新 2025-03-20）写明：不限制 IP 的 HMAC 密钥只有读取权限——Unrestricted-IP-Access HMAC API Key(s) won't have any permission other than reading。要开提现权限，必须添加 IPv4 白名单。密钥、IP 或权限不符时，<a href="https://developers.binance.com/en/docs/products/spot/errors">错误码文档</a>里对应的是 <code>-2015</code>，原文是 Invalid API-key, IP, or permissions for action。</p>
+<p><strong>币安。</strong> 帮助中心《<a href="https://www.binance.com/en/support/faq/360002502072">How to Create API Keys on Binance?</a>》（页面写最后更新 2025-03-20）写明：不限制 IP 的 HMAC 密钥只有读取权限，原文是 Unrestricted-IP-Access HMAC API Key(s) won't have any permission other than reading。要开提现权限，必须添加 IPv4 白名单。密钥、IP 或权限不符时，<a href="https://developers.binance.com/en/docs/products/spot/errors">错误码文档</a>里对应的是 <code>-2015</code>，原文是 Invalid API-key, IP, or permissions for action。</p>
 <p><strong>欧易（OKX）。</strong> <a href="https://app.okx.com/docs-v5/en/">API 文档</a>写明：每个 API Key 最多绑定 20 个 IP，支持 IPv4、IPv6 和网段。<strong>没有绑定 IP、又有交易或提现权限的 Key，连续 14 天不用会被自动删除</strong>（<a href="https://www.okx.com/help/api-faq">API 常见问题</a>，页面更新于 2026-09-28）。IP 不在白名单时返回错误码 <code>50110</code>：Your IP {param0} is not included in your API key's IP whitelist。另有 <code>50121</code>：You can't access our services through the IP address（不能通过该 IP 访问服务）。</p>
 <p><strong>Kraken。</strong> 开发者文档《<a href="https://docs.kraken.com/exchange/guides/rest/api-keys">API key permissions</a>》建议：Use IP whitelisting. Lock your API key to the IP addresses your trading system runs from.（把 API Key 锁定到你交易程序运行的 IP 上。）这一页没有写 IP 不符时返回什么错误。</p>
 <p><strong>Hyperliquid。</strong> 它的 API 用钱包签名授权，可以另外批准「API 钱包」代为签名（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/nonces-and-api-wallets">文档</a>）。我们读到的这页和限频页都没有提到 IP 白名单功能，但它的<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits">限频</a>按 IP 计算，比如每个 IP 最多 10 个 WebSocket 连接、REST 每分钟合计权重 1200。</p>
@@ -104,7 +104,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li>程序断线后能否自动重连、补齐数据，断线期间的挂单怎么处理。</li>
 <li>不把 API Key 和密钥交给任何线路服务商，包括登月VPN。</li>
 </ol>
-<p>账户和地区规则以平台为准，固定一个出口国家、少来回切换最稳妥：白名单绑的是 IP，出口一换，程序就会报错。</p>
+<p>账户和地区规则以平台为准，固定一个出口国家、少来回切换更稳：白名单绑的是 IP，出口一换，程序就会报错。</p>
 <p>客户端和程序怎么配置，这篇不讲。登月VPN 用户遇到连接问题，看<a href="https://dengyue.xyz/help">官网帮助中心</a>。套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
