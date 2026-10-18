@@ -23,8 +23,8 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <h1>GitHub 上的机场推荐列表能信吗：怎么核对</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/github-airport-lists/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>GitHub 上的机场推荐列表可以当线索，不能直接当结论。先用提交记录、链接和 Issues 核对它是不是最近维护过、和机场有没有推广关系，再决定要不要买月付自己测。</strong></p>
-<p>核对分 5 步：看最近一次真正改内容的提交，看链接是不是推广链接，看有没有写测试方法，看 Issues 和星标，再分清推荐列表和免费节点。星标多、标题写着「2026 最新」，都不等于内容是最近核对过的。</p>
-<p>我们是登月VPN，自己也卖线路，所以这篇不点评任何一个具体仓库，只讲怎么核对。商业测评网站的排行榜怎么读，另见 <a href="vpn-ranking-evidence.html">VPN 排行榜怎么读</a>。</p>
+<p>核对分 5 步：看最近一次改了内容的提交，看链接是不是推广链接，看有没有写测试方法，看 Issues 和星标，再分清推荐列表和免费节点。星标多、标题写着「2026 最新」，都说明不了内容是最近核对过的。</p>
+<p>我们是登月VPN，自己也卖线路，所以这篇讲怎么核对，不点评任何一个具体仓库。商业测评网站的排行榜怎么读，另见 <a href="vpn-ranking-evidence.html">VPN 排行榜怎么读</a>。</p>
 <h3>GitHub 列表和测评网站有什么不同</h3>
 <p>搜「机场推荐 github」，找到的大多是个人或小团队维护的 README：一张表，列着机场名字、价格、节点地区，后面跟一个注册链接。它和测评网站有三点不一样：</p>
 <table>
@@ -68,7 +68,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li>地址里带 <code>aff=</code>、<code>code=</code>、<code>ref=</code>、<code>invite</code> 之类的参数，通常是推广链接，点进去注册，维护者可以拿到返佣。</li>
 <li>链接先跳到一个短链或中转页，再到机场官网，也常见于推广。</li>
 </ul>
-<p>推广本身很普遍，不代表列表一定有偏差。要注意的是：README 里有没有写明「链接含推广」？如果每个机场都带推广链接、却完全没写，你就要把排序当成作者的选择，而不是测出来的结果。</p>
+<p>推广本身很普遍，不代表列表一定有偏差。要注意的是：README 里有没有写明「链接含推广」？如果每个机场都带推广链接、却完全没写，你就要把排序当成作者的选择，别当成测出来的结果。</p>
 <h3>第三步：看有没有测试方法</h3>
 <p>很多列表只写「速度快」「稳定」「推荐」。能复核的写法至少要写清在哪测（大陆家宽还是海外服务器）、什么时段、哪个运营商、测了几次，这几项的逐项读法见 <a href="vpn-ranking-evidence.html">VPN 排行榜怎么读</a>。</p>
 <p>列表里附了测速截图的，按 <a href="review-missing-details.html">一篇机场实测缺少哪些信息就难以复核</a> 那 9 项逐项对一下。什么方法都没写的，只能当「有这几家」的名单用。</p>
@@ -79,9 +79,9 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li>维护者有没有回复、有没有据此修改列表？</li>
 <li>仓库是不是关闭了 Issues？关了就少了一个读者反馈的渠道。</li>
 </ul>
-<p><strong>星标</strong> 只能当热度参考。GitHub 官方说明里，星标用来收藏仓库、发现相似项目，也表示对维护者的认可（<a href="https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars">GitHub 文档：用星标保存仓库</a>，2026-10-13 核对）。它反映的是多少人收藏过，不是有多少人用过列表里的机场。GitHub 的《可接受使用政策》明确禁止自动刷星、刷关注这类「排名滥用」（<a href="https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies">GitHub Acceptable Use Policies 第 4 节</a>，2026-10-13 核对），平台禁止，说明确实有人会这么做。星标很多、Issues 却很冷清，就要多留个心。</p>
+<p><strong>星标</strong> 只能当热度参考。GitHub 官方说明里，星标用来收藏仓库、发现相似项目，也表示对维护者的认可（<a href="https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars">GitHub 文档：用星标保存仓库</a>，2026-10-13 核对）。它反映的是多少人收藏过，说明不了有多少人用过列表里的机场。GitHub 的《可接受使用政策》明确禁止自动刷星、刷关注这类「排名滥用」（<a href="https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies">GitHub Acceptable Use Policies 第 4 节</a>，2026-10-13 核对），平台禁止，说明确实有人会这么做。星标很多、Issues 却很冷清，就要多留个心。</p>
 <h3>第五步：分清「推荐列表」和「免费节点」</h3>
-<p>搜 GitHub 时，还会碰到另一类仓库：直接贴出免费订阅链接或节点。它和推荐列表是两回事：</p>
+<p>搜 GitHub 时，还会碰到另一类仓库：直接贴出免费订阅链接或节点。它和推荐列表性质不同：</p>
 <ul>
 <li>推荐列表只是介绍机场，你最后还是去机场官网买。</li>
 <li>免费节点仓库给的是现成的连接，你的流量会经过一台你不知道是谁在运营的服务器。</li>
