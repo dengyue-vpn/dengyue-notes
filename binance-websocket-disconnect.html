@@ -24,7 +24,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/binance-websocket-disconnect/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>币安 WebSocket 断开，先看规律：约 24 小时断一次，是币安的连接规则。只在晚上频繁断、恢复慢，多半是线路。按「币安规则 → 本地设备 → 线路」三段排查。</strong></p>
 <p>线路问题的解决办法是按你家运营商选一条直连线路固定用：电信用韩国【电信直连】01，联通用韩国【联通直连】01，移动用韩国【移动直连】01。</p>
-<h3>WebSocket 断开和「币安打不开」不是一回事</h3>
+<h3>WebSocket 断开和「币安打不开」要分开看</h3>
 <p>币安网页和 App 上的实时价格、深度和成交明细，靠 WebSocket 推过来：连接建好后一直挂着，有新数据就推。断开时页面通常还能打开，只是价格停住、K 线不跳，过一会儿自己恢复。</p>
 <p>如果是整个页面打不开、一直转圈或提示网络异常，那是另一类问题，看 <a href="binance-network-route.html">币安打不开、提示网络异常怎么办</a>。</p>
 <h3>第一段：先对照币安自己的断开规则</h3>
@@ -126,7 +126,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </ul>
 <p>程序要全天候在线，比如自动交易或需要 API 白名单的场景，放云服务器上更合适，两种做法的比较见 <a href="exchange-api-ip-whitelist.html">交易所 API 白名单：用云服务器还是固定出口线路</a>。</p>
 <p>本文只核对了币安现货行情的 WebSocket 文档，合约的连接规则另有文档，以币安官方说明为准。</p>
-<p>套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>，先买月付，按上面三段查完、测三个晚上再决定。登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务。</p>
+<p>套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>，先买月付，新购订单开通后 24 小时内、本期用量不超过 5GB 可以全额退款，在这段时间里先测一晚，不合适就在退款期内申请退款，之后补测到三晚再下结论。登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
 </body></html>
