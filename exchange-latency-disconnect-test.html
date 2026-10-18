@@ -23,7 +23,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <h1>测速快不等于行情稳：看盘断线和延迟怎么测</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/exchange-latency-disconnect-test/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>看盘稳不稳要分开看四项：延迟、下载速度、行情长连接会不会断、断了多久恢复。测速软件通常只给前两项，后两项才决定盯盘时行情会不会卡住。</strong></p>
-<p>最可靠的办法是在晚上 8 点到 11 点连续测 3 晚，按下面的记录表来。</p>
+<p>可靠的办法是在晚上 8 点到 11 点连续测 3 晚，按下面的记录表来。</p>
 <h3>四项指标分别说明什么</h3>
 <table>
 <thead>
@@ -39,7 +39,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <td>ICMP 延迟（ping）</td>
 <td>一个小包来回的时间</td>
 <td>线路通、离得近</td>
-<td>有些网络对 ping 和真实流量处理不同；也说明不了下单快慢</td>
+<td>有些网络对 ping 和真实流量处理不同，也说明不了下单快慢</td>
 </tr>
 <tr>
 <td>TCP 延迟</td>
@@ -63,15 +63,15 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </table>
 <p>交易所网页和 App 的实时行情，大多走 WebSocket 这类长连接：连上以后一直挂着，服务器有新价格就推过来。<strong>ping 很低的线路，长连接照样可能每隔一会儿断一次。</strong> 只看测速截图，看不出这一点。</p>
 <h3>交易所自己也会断开连接</h3>
-<p>不是每次断开都是线路的问题。交易所的开发文档写明了它们主动断开连接的规则（以下 2026-10-11 核对）：</p>
+<p>断开不一定都是线路的问题。交易所的开发文档写明了它们主动断开连接的规则（以下 2026-10-11 核对）：</p>
 <p><strong>币安</strong>（<a href="https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/web-socket-streams.md">WebSocket 行情流文档</a>）：</p>
 <ul>
 <li>A single connection to stream.binance.com is only valid for 24 hours; expect to be disconnected at the 24 hour mark.（单个连接只保持 24 小时，到点会被断开。）</li>
 <li>服务器每 20 秒发一次 ping，一分钟内收不到回应就断开连接。</li>
 <li>每个 IP 每 5 分钟最多尝试 300 次连接。</li>
 </ul>
-<p><strong>Hyperliquid</strong>（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket/timeouts-and-heartbeats">Timeouts and heartbeats</a>）：服务器 60 秒内没给某个连接发过消息，就会关掉它；客户端可以发 ping 保持连接。</p>
-<p>所以：<strong>一天断一次、几秒内自动连回来，可能只是平台的正常规则；晚上频繁断、每次要几十秒才恢复，才更像网络问题。</strong> 记录时要把「断了多久」和「多久断一次」都写下来。</p>
+<p><strong>Hyperliquid</strong>（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket/timeouts-and-heartbeats">Timeouts and heartbeats</a>）：服务器 60 秒内没给某个连接发过消息，就会关掉它，客户端可以发 ping 保持连接。</p>
+<p>所以：<strong>一天断一次、几秒内自动连回来，可能只是平台的正常规则。晚上频繁断、每次要几十秒才恢复，才更像网络问题。</strong> 记录时要把「断了多久」和「多久断一次」都写下来。</p>
 <h3>我们选线用的标准</h3>
 <p>登月VPN 挑线路时，按你家运营商在晚高峰测延迟、卡顿和丢包，用的是下面这套标准：</p>
 <table>
@@ -84,7 +84,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <tbody>
 <tr>
 <td>平均延迟</td>
-<td>亚洲线路 ≤120ms；欧美等远距离线路 ≤230ms</td>
+<td>亚洲线路 ≤120ms，欧美等远距离线路 ≤230ms</td>
 </tr>
 <tr>
 <td>卡顿</td>
@@ -104,17 +104,17 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p>这是我们为看网页、开会、看行情这类日常使用定的，不是行业统一标准。你自己测时可以拿它当参照。</p>
+<p>这是我们为看网页、开会、看行情这类日常使用定的参考标准，你自己测时可以拿它当参照。</p>
 <p>这套标准管的是延迟、卡顿和丢包。行情长连接会不会断、断了多久恢复，和你的交易所、页面、设备都有关，最好按下面的方法自己测几晚。</p>
 <h3>延迟低，下载不一定顺</h3>
 <p>延迟和下载速度要分开验证。举例：假设某条线路晚上 ping 只有 60ms，可打开 K 线图要转好几秒，说明小包来回快，但连续传数据时吞吐不够。反过来，测速软件下载跑得很快的线路，晚高峰也可能延迟忽高忽低。</p>
 <p>所以测的时候，ping 和「打开页面、加载图表要多久」各记一项。</p>
 <h3>自己测 3 个晚上：怎么记</h3>
-<p>不用装专门的软件，用你平时真正看盘的方式来测就行。</p>
+<p>不用装专门的软件，用你平时看盘的方式来测就行。</p>
 <p><strong>测之前定好：</strong></p>
 <ul>
-<li>测哪个交易所、哪个页面（比如某个合约的 K 线和盘口）；</li>
-<li>用什么网络：家里宽带写清是电信、联通还是移动；手机流量另记一组；</li>
+<li>测哪个交易所、哪个页面（比如某个合约的 K 线和盘口）。</li>
+<li>用什么网络：家里宽带写清是电信、联通还是移动，手机流量另记一组。</li>
 <li>时间：连续 3 晚，每晚 20:00–23:00 至少盯 1 小时。</li>
 </ul>
 <p><strong>每晚记一行：</strong></p>
@@ -149,18 +149,18 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p><strong>怎么看结果：</strong></p>
 <ol>
 <li><strong>行情停住</strong>：价格或成交明细超过几秒不动、页面出现重连提示，记一次，同时看手表记下多久恢复。</li>
-<li><strong>对照一次</strong>：觉得卡的时候，用另一种网络（手机流量或另一条线路）同时打开同一页面。两边都卡，多半是平台；只有一边卡，问题在那条网络上。</li>
-<li><strong>三晚放在一起比</strong>：「三晚断了 2 次，每次 10 秒内恢复」可以接受还是不行，由你的交易方式决定；手动做长线和盯盘做短线，要求不同。</li>
+<li><strong>对照一次</strong>：觉得卡的时候，用另一种网络（手机流量或另一条线路）同时打开同一页面。两边都卡，多半是平台。只有一边卡，问题在那条网络上。</li>
+<li><strong>三晚放在一起比</strong>：「三晚断了 2 次，每次 10 秒内恢复」可以接受还是不行，由你的交易方式决定，手动做长线和盯盘做短线，要求不同。</li>
 <li><strong>白天测一次做参照</strong>：只有晚上出问题，基本是晚高峰拥堵。</li>
 </ol>
-<p>断了之后页面打不开、提示地区不支持或 500 错误，那是另一类问题，判断方法见 <a href="exchange-not-loading.html">交易所打不开、网络异常：先判断是线路还是平台</a>。延迟、抖动、丢包这些指标的更多解释见 <a href="speedtest-buying-guide.html">机场测速怎么看</a>；我们测线路用的完整方法见 <a href="peak-hour-test-method.html">晚高峰实测方法</a>。</p>
+<p>断了之后页面打不开、提示地区不支持或 500 错误，那是另一类问题，判断方法见 <a href="exchange-not-loading.html">交易所打不开、网络异常：先判断是线路还是平台</a>。延迟、抖动、丢包这些指标的更多解释见 <a href="speedtest-buying-guide.html">机场测速怎么看</a>。我们测线路用的完整方法见 <a href="peak-hour-test-method.html">晚高峰实测方法</a>。</p>
 <h3>哪些情况这套方法帮不上</h3>
 <ul>
-<li><strong>下单延迟。</strong> 你点下单到交易所撮合成交的时间，涉及交易所内部处理，用户侧测不出来；TCP 连接时间不能当成下单延迟。</li>
+<li><strong>下单延迟。</strong> 你点下单到交易所撮合成交的时间，涉及交易所内部处理，用户侧测不出来，TCP 连接时间不能当成下单延迟。</li>
 <li><strong>跑程序的长期连接。</strong> 程序要的是全天候稳定，建议放到云服务器上，见 <a href="exchange-api-ip-whitelist.html">交易所 API 白名单：云服务器还是固定出口线路</a>。</li>
 <li><strong>出口地区。</strong> 提示「IP 受限」「地区不支持」，是当前线路的出口地区不合适，测速解决不了，换到推荐线路，见 <a href="exchange-route-choice.html">交易所用哪条线路：10 家交易所按电信、联通、移动选线</a>。</li>
 </ul>
-<p>套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>，先买月付，按上面的记录表测三晚再决定。登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务。</p>
+<p>套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>，先买月付，新购订单开通后 24 小时内、本期用量不超过 5GB 可以全额退款，在这段时间里按上面的记录表先测一晚再决定。登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
 </body></html>
