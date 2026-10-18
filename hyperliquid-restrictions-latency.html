@@ -59,7 +59,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li><strong>你家 → 线路服务器</strong>：经过国内运营商和跨境出口，晚高峰拥堵主要发生在这里。</li>
 <li><strong>线路服务器 → Hyperliquid 的 API 入口</strong>：服务器在境外机房，这一段通常很短。</li>
 </ol>
-<p>所以选线时，第一段才是关键：同一个地区的线路，给电信优化的和给联通优化的，晚上表现可能差很多。这也是登月VPN 的线路按运营商分开命名的原因。</p>
+<p>所以选线主要看第一段：同一个地区的线路，给电信优化的和给联通优化的，晚上表现可能差很多。这也是登月VPN 的线路按运营商分开命名的原因。</p>
 <h3>延迟怎么看</h3>
 <p><strong>看对时间。</strong> 白天几乎所有线路都快，比较要放在晚上 8 点到 11 点。</p>
 <p><strong>看对指标。</strong> 测速软件的 ping 值只是一个小包来回的时间。看盘稳不稳，还要看行情连接会不会断、断了多久恢复。</p>
@@ -71,11 +71,11 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </ul>
 <p>举例：假设某条线路白天 ping 40ms、晚上 21:00 后升到 150ms 并开始偶尔停顿，那就是晚高峰拥堵。换一条给你家运营商的直连线路再测一次对比。</p>
 <p>完整的测法和记录表见 <a href="exchange-latency-disconnect-test.html">看盘断线和延迟怎么测</a>。</p>
-<p><strong>测速快不等于下单快。</strong> 你点下单到成交，要经过交易所内部处理，用户侧测不出来。TCP 连接时间不能当成下单延迟。</p>
+<p><strong>测速快，下单不一定快。</strong> 你点下单到成交，要经过交易所内部处理，用户侧测不出来。TCP 连接时间不能当成下单延迟。</p>
 <h3>官方开发文档里的连接规则</h3>
 <p>Hyperliquid 网络相关的说明在开发者文档里。以下两页 2026-10-11 核对，页面未写更新日期。</p>
 <p><strong>WebSocket 超时和心跳</strong>（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket/timeouts-and-heartbeats">Timeouts and heartbeats</a>）：服务器如果 60 秒内没有给某个连接发过消息，就会关掉它。订阅的频道不是每 60 秒都有数据时，客户端可以发 <code>{ "method": "ping" }</code>，服务器回 <code>{ "channel": "pong" }</code>，用来保持连接。</p>
-<p><strong>限频</strong>（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits">Rate limits and user limits</a>）：以下限制<strong>按 IP 地址计算</strong>——</p>
+<p><strong>限频</strong>（<a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits">Rate limits and user limits</a>）：以下限制<strong>按 IP 地址计算</strong>：</p>
 <table>
 <thead>
 <tr>
@@ -113,7 +113,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li>限频按 IP 计。按字面理解，同一个出口 IP 上的所有请求共用这些额度。手动看盘一般用不满。如果你跑程序、开多个连接，要考虑出口 IP 是不是多人共用。登月VPN 每条线路的出口 IP 固定，不在多个国家之间自动切换，这个 IP 由多位用户共用，适合手动交易和轻量 API。长期跑程序怎么选，见 <a href="exchange-api-ip-whitelist.html">交易所 API 白名单：云服务器还是固定出口线路</a>。</li>
 </ul>
 <h3>用 Hyperliquid 的习惯</h3>
-<p>账户和地区规则以平台为准，固定一个出口国家、少来回切换最稳妥。在客户端里手动选定一条线路，电脑和手机用同一个地区，不要开会自动换节点的模式。</p>
+<p>账户和地区规则以平台为准，固定一个出口国家、少来回切换更稳。在客户端里手动选定一条线路，电脑和手机用同一个地区，不要开会自动换节点的模式。</p>
 <p>套餐和价格见 <a href="https://dengyue.xyz/pricing">dengyue.xyz/pricing</a>，客户端设置看<a href="https://dengyue.xyz/help">帮助中心</a>。登月VPN 是 2026 年 10 月 10 日开卖的直连线路服务。</p>
 </main>
 <footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
