@@ -26,10 +26,10 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>固定 IP 常被和「独享」「原生」混在一起卖。这篇只回答一个问题：你的出口 IP 需不需要保持不变。</p>
 <h3>固定 IP 是什么意思</h3>
 <p>固定 IP 指你每次连上同一条线路，网站看到的出口地址都是同一个。和它相对的是动态出口：每次连接、每隔一段时间，或者负载均衡时，出口地址都可能变。</p>
-<p>它和另外两件事不是一回事：</p>
+<p>它和另外两件事要分开看：</p>
 <ul>
-<li><strong>固定 ≠ 独享。</strong> 一个固定 IP 可以由很多人共用。区别见<a href="dedicated-shared-ip.html">独享 IP 和共享 IP 怎么选</a>。</li>
-<li><strong>固定 ≠ 原生、住宅。</strong> 那是 IP 归属和定位的问题，见<a href="ip-type-choice.html">机房 IP、住宅 IP、原生 IP 有什么区别</a>。</li>
+<li><strong>固定 IP 可以由很多人共用。</strong> 区别见<a href="dedicated-shared-ip.html">独享 IP 和共享 IP 怎么选</a>。</li>
+<li><strong>原生、住宅说的是 IP 归属和定位。</strong> 见<a href="ip-type-choice.html">机房 IP、住宅 IP、原生 IP 有什么区别</a>。</li>
 </ul>
 <h3>需要固定 IP 的情况</h3>
 <p>判断方法很简单：<strong>有没有哪个系统要你事先登记 IP？</strong> 有，就需要。没有，基本不需要。</p>
@@ -68,10 +68,10 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <h3>用普通节点就够的情况</h3>
 <ul>
 <li><strong>看网页、刷视频、社交软件。</strong> 网站不关心你的 IP 是不是每次一样。</li>
-<li><strong>看行情、手动下单。</strong> 影响体验的是延迟、抖动和断线，不是 IP 固不固定。挑线路看晚高峰实测，见<a href="speedtest-buying-guide.html">机场测速怎么看</a>。</li>
+<li><strong>看行情、手动下单。</strong> 影响体验的是延迟、抖动和断线，和 IP 固不固定关系不大。挑线路看晚高峰实测，见<a href="speedtest-buying-guide.html">机场测速怎么看</a>。</li>
 <li><strong>开视频会议、远程办公（不涉及 IP 白名单）。</strong> 会议软件更在意连接连续，一条稳定的线路比固定 IP 重要。</li>
 </ul>
-<p>还有一个常见误会：以为固定 IP 能让账户「更安全」或「不被风控」。平台判断风险看的东西很多，IP 只是其中一项。对看盘、手动交易的人来说，账户和地区规则以平台为准，固定一个出口国家、少来回切换最稳妥。</p>
+<p>还有一个常见误会：以为固定 IP 能让账户「更安全」或「不被风控」。平台判断风险看的东西很多，IP 只是其中一项。对看盘、手动交易的人来说，账户和地区规则以平台为准，固定一个出口国家、少来回切换更稳。</p>
 <h3>买「固定 IP」之前问清楚</h3>
 <ol>
 <li><strong>固定到什么程度？</strong> 是只要你不换线路就不变，还是会定期轮换？</li>
@@ -84,8 +84,8 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>登月VPN <strong>每条线路的出口 IP 固定，不在多个国家之间自动切换</strong>。比如你用「韩国【电信直连】01」，正常情况下每次都从同一个韩国地址出去，不在多个地址之间轮换。</p>
 <p>但要说清楚两点：</p>
 <ul>
-<li><strong>它是共享的，不是独享。</strong> 用这条线路的多位用户共用这个出口。</li>
-<li><strong>「固定」不等于永远不变。</strong> IP 在大陆连不上或服务器故障时，这条线路的出口 IP 可能更换。</li>
+<li><strong>它是共享的。</strong> 用这条线路的多位用户共用这个出口。</li>
+<li><strong>「固定」指正常情况下不变。</strong> IP 在大陆连不上或服务器故障时，这条线路的出口 IP 可能更换。</li>
 </ul>
 <p>所以：</p>
 <ul>
