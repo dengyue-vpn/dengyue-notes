@@ -51,7 +51,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p>账户和地区规则以平台为准，固定一个出口地区、少来回切换最稳妥。登月VPN 每条线路的出口 IP 固定，不在多个国家之间自动切换。</p>
+<p>账户和地区规则以平台为准，固定一个出口地区、少来回切换更稳。登月VPN 每条线路的出口 IP 固定，不在多个国家之间自动切换。</p>
 <p>登月VPN 的美国线路是日常上网线路，不承诺 AI 用途。</p>
 <h3>OpenAI 的两张名单</h3>
 <ul>
@@ -67,14 +67,14 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>大意：ChatGPT 和 API 平台是两套计费系统。同一页还写明「API usage is billed separately from your ChatGPT subscription」，订阅 ChatGPT 不包含 API 用量，API 要在 API 账户里单独付费。同页也提醒，ChatGPT 订阅可以通过网页、Apple App Store 或 Google Play 付费，在多个平台同时订阅可能被分别扣费。</p>
 <p>网页和 API 的更多区别见 <a href="ai-web-api-difference.html">AI 网页能用就代表 API 能用吗</a>。</p>
 <h3>网络看什么</h3>
-<p>ChatGPT 对网络的要求是连续，不是峰值速度：</p>
+<p>ChatGPT 对网络的要求是连续，对峰值速度要求不高：</p>
 <ul>
 <li><strong>回答是流式传回来的。</strong> OpenAI 的 <a href="https://developers.openai.com/api/docs/guides/streaming-responses">流式响应文档</a> 写明流式回答通过 server-sent events 传输。整段回答期间连接不能断，中途断了，这一轮回答通常就不完整了。</li>
 <li><strong>晚高峰比白天重要。</strong> 白天正常、晚上 9 点后变差的线路很常见。测法见 <a href="peak-hour-test-method.html">晚高峰实测方法</a>：连续几晚在 20:00–23:00 测，电信、联通、移动分开记录。</li>
 <li><strong>记录比感觉可靠。</strong> 记下每晚断了几次、每次多久恢复，比「感觉还行」更好比较。</li>
 </ul>
 <h3>「ChatGPT 专用线路」要不要加钱</h3>
-<p>有些服务商会把节点标成「ChatGPT 专用」「AI 解锁」。用 ChatGPT 真正要看的就两件事：出口地区在 OpenAI 名单里，出口固定不乱跳。一条出口在名单内、IP 固定的普通线路就满足这两点，不必为标签多付钱。怎么核对这类宣传，见 <a href="ai-ip-marketing.html">「AI 专用节点」值得加钱吗</a>。</p>
+<p>有些服务商会把节点标成「ChatGPT 专用」「AI 解锁」。用 ChatGPT 要看的就两件事：出口地区在 OpenAI 名单里，出口固定不乱跳。一条出口在名单内、IP 固定的普通线路就满足这两点，不必为标签多付钱。怎么核对这类宣传，见 <a href="ai-ip-marketing.html">「AI 专用节点」值得加钱吗</a>。</p>
 <h3>下一步</h3>
 <ul>
 <li>同时用 Claude、Gemini：三家名单对照在 <a href="ai-tools-network-choice.html">ChatGPT、Claude、Gemini 选哪个出口地区</a>。</li>
