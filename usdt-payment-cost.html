@@ -22,7 +22,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
 <h1>用 USDT 买订阅：手续费怎么算，转账前核对这 7 项</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/usdt-payment-cost/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
-<p><strong>用 USDT 买订阅，实付是订单金额加上这次转账的网络费；从交易所提币的，要算提币手续费。</strong> 转账前核对网络、费用从哪扣、对方实收够不够。</p>
+<p><strong>用 USDT 买订阅，实付是订单金额加上这次转账的网络费，从交易所提币的，要算提币手续费。</strong> 转账前核对网络、费用从哪扣、对方实收够不够。</p>
 <p>本文只讲付款时怎么核算和核对，不涉及买卖 USDT 或任何投资建议。</p>
 <h3>实付由哪几部分组成</h3>
 <table>
@@ -51,7 +51,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p>从自己的钱包转，付的是网络费；从交易所提币，付的是交易所页面上标的提币手续费。两者金额不一定相同，所以同一个订单，不同的付款方式实付不一样。</p>
+<p>从自己的钱包转，付的是网络费。从交易所提币，付的是交易所页面上标的提币手续费。两者金额不一定相同，所以同一个订单，不同的付款方式实付不一样。</p>
 <h3>不同网络的费用：以当时页面为准</h3>
 <p>同叫 USDT，在不同区块链网络上是不同的代币合约，互相不通。Tether 官网列出了它支持的 USD₮ 协议，包括 Tron 上的 TRC20、以太坊上的 ERC20、Solana、TON 等（<a href="https://tether.to/en/supported-protocols/">Tether 支持的协议</a>，2026-10-11 核对）。</p>
 <p>网络费随网络拥堵变化，下面是我们在当时页面读到的数字，只代表那一刻：</p>
@@ -74,7 +74,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <tr>
 <td>TRC20（Tron）</td>
 <td>能量和带宽，不够时燃烧 TRX</td>
-<td><a href="https://developers.tron.network/docs/paying-for-resources">Tron 开发文档</a>（页面更新于 2026-10-10）写明：能量按每单位 100 sun（0.0001 TRX）燃烧，带宽按每单位 1,000 sun；<a href="https://developers.tron.network/docs/resource-model">资源模型</a>一页写明，每个账户在滚动 24 小时内当前有 600 免费带宽。我们 2026-10-10 16:06 UTC 查询链上参数，能量价格同为 100 sun</td>
+<td><a href="https://developers.tron.network/docs/paying-for-resources">Tron 开发文档</a>（页面更新于 2026-10-10）写明：能量按每单位 100 sun（0.0001 TRX）燃烧，带宽按每单位 1,000 sun，<a href="https://developers.tron.network/docs/resource-model">资源模型</a>一页写明，每个账户在滚动 24 小时内当前有 600 免费带宽。我们 2026-10-10 16:06 UTC 查询链上参数，能量价格同为 100 sun</td>
 <td>钱包确认页显示的能量消耗 × 100 sun</td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </table>
 <p>TRC20 的 USDT 转账属于合约调用，要消耗能量。一笔转账具体消耗多少能量，官方文档没有给固定数字，以钱包确认页的预估为准：没有质押或租用能量时，燃烧的 TRX 大约等于「预估能量 × 0.0001 TRX」。</p>
 <p><strong>交易所提币手续费</strong>：各交易所按网络分别定价，而且常有调整，以你提币时页面上显示的「手续费」和「到账数量」为准。</p>
-<h3>算例：从交易所提币时，最容易少付</h3>
+<h3>算例：从交易所提币时，容易少付</h3>
 <p>下面的数字是假设：订单金额 20 USDT，交易所对你选的网络收提币手续费 1 USDT（假设）。</p>
 <table>
 <thead>
@@ -113,7 +113,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p>提币页如果同时显示「提币数量」和「到账数量」，<strong>要让「到账数量」等于订单金额</strong>，而不是让「提币数量」等于订单金额。这次你的实付就是 21 USDT。</p>
+<p>提币页如果同时显示「提币数量」和「到账数量」，<strong>以「到账数量」为准，让它等于订单金额</strong>。这次你的实付就是 21 USDT。</p>
 <p>从自己的钱包转账时，USDT 数量填订单金额即可，网络费用对应链的原生币另付（BEP20 用 BNB，TRC20 消耗能量或燃烧 TRX）。钱包里没有足够的原生币，转账会失败。</p>
 <h3>转账前的核对清单</h3>
 <ol>
@@ -134,10 +134,10 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </ul>
 <p>退款同样有网络费。退款前问清楚：退回哪个网络、手续费由谁承担、实际能收到多少。如果退款收款地址是交易所，入账还要符合交易所对网络、确认数和最低充值的要求。</p>
 <h3>把网络费算进比价</h3>
-<p>网络费和提币费是每次付款都要付的。月付一年付 12 次，年付付 1 次，付款次数越多，这部分占比越高。比价时把它加进每月实付里，方法见 <a href="budget-airport-selection.html">便宜机场怎么选：比较真实月付总价</a>；按量和月付的付款次数也不同，见 <a href="usage-vs-monthly.html">按量付费和月付机场，哪种适合自己的用量</a>。</p>
+<p>网络费和提币费是每次付款都要付的。月付一年付 12 次，年付付 1 次，付款次数越多，这部分占比越高。比价时把它加进每月实付里，方法见 <a href="budget-airport-selection.html">便宜机场怎么选：比较真实月付总价</a>。按量和月付的付款次数也不同，见 <a href="usage-vs-monthly.html">按量付费和月付机场，哪种适合自己的用量</a>。</p>
 <p>但不要为了省网络费，第一次就买长账期。没用过的服务，先按 <a href="trial-checklist.html">试用清单</a> 用月付验证。</p>
 <h3>登月VPN 怎么收款</h3>
-<p>我们是登月VPN，只收加密货币，用 USDT 付款。当前开放哪个网络、收款地址、准确金额和付款时限，都以登录后订单页显示的为准；付款、未开通、退款的流程见 <a href="https://dengyue.xyz/refunds">付款、订单与退款</a>。我们的退款流程是：从订单详情提交工单，提供订单号和交易哈希，我们核对实际到账和使用情况后报给你可退金额、网络和费用承担方式，你确认后再处理（2026-10-11 核对）。</p>
+<p>我们是登月VPN，只收加密货币，用 USDT 付款。当前开放哪个网络、收款地址、准确金额和付款时限，都以登录后订单页显示的为准。付款、未开通、退款的流程见 <a href="https://dengyue.xyz/refunds">付款、订单与退款</a>。我们的退款流程是：从订单详情提交工单，提供订单号和交易哈希，我们核对实际到账和使用情况后报给你可退金额、网络和费用承担方式，你确认后再处理（2026-10-11 核对）。</p>
 <h3>下一步</h3>
 <ul>
 <li>看登月VPN 的套餐和价格（钱包网络费另计）：<a href="https://dengyue.xyz/pricing">套餐与价格</a>。</li>
