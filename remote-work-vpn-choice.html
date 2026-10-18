@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>远程办公 VPN 怎么选：开会不掉线，先看丢包和连续连接 | 登月VPN 技术笔记</title>
-<meta name="description" content="远程办公选网络，先看开会时的丢包和断线、上传够不够、工作时段能否连续几小时不掉；测速高不代表开会稳。附会议软件官方带宽、网络指标和测试方法。">
+<meta name="description" content="远程办公选网络，先看开会时的丢包和断线、上传够不够、工作时段能否连续几小时不掉，测速高不代表开会稳。附会议软件官方带宽、网络指标和测试方法。">
 <link rel="canonical" href="https://dengyue.xyz/blog/remote-work-vpn-choice/">
 <link rel="icon" href="icon.png" type="image/png">
 <meta name="theme-color" content="#6554f5">
@@ -80,11 +80,11 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tr>
 </tbody>
 </table>
-<p>这是微软为企业网络定的目标，不是能不能开会的硬门槛，但它说明了一件事：<strong>开会对丢包的要求，比看网页严格得多。</strong></p>
+<p>这是微软为企业网络定的目标，达不到也不一定开不了会，但它说明了一件事：<strong>开会对丢包的要求，比看网页严格得多。</strong></p>
 <p>几家会议软件的官方页面还提到两点，和选线路直接相关（均为 2026-10-11 核对）：</p>
 <ul>
 <li><strong>绕路会增加延迟。</strong> Google 的 Meet 网络准备页说，VPN 会增加延迟，可能导致 Meet 降低视频和音频质量（<a href="https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams">Google Workspace 帮助</a>）。微软也建议企业让 Teams 流量绕开公司 VPN，原因之一是流量可能被送到离用户更远的接入点，带来更多延迟和抖动（<a href="https://learn.microsoft.com/en-us/microsoftteams/prepare-network">Teams 网络准备</a>）。</li>
-<li><strong>UDP 比 TCP 好。</strong> 微软说媒体流量强烈建议走 UDP，Teams 在 UDP 不可用时会退回 TCP，但会影响表现；Google 也说用 TCP 或经代理的 TCP 会降低会议质量。</li>
+<li><strong>UDP 比 TCP 好。</strong> 微软说媒体流量强烈建议走 UDP，Teams 在 UDP 不可用时会退回 TCP，但会影响表现。Google 也说用 TCP 或经代理的 TCP 会降低会议质量。</li>
 </ul>
 <p>对选跨境线路的意义：<strong>线路离你近、晚高峰丢包低、支持 UDP 转发，开会才有基础。</strong> 是否支持 UDP，买之前问服务商。</p>
 <h3>带宽要多少：上传别忽略</h3>
@@ -120,13 +120,13 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </tbody>
 </table>
 <p>来源：<a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0060748">Zoom 系统要求</a>、Google Meet 和 Teams 同上，均为 2026-10-11 核对。</p>
-<p>几 Mbps 对家用宽带不算高，真正容易出问题的是<strong>晚高峰时跨境线路的上传和丢包</strong>。会议每小时会用掉多少流量，见 <a href="monthly-traffic-estimate.html">一个月需要多少流量</a>。</p>
+<p>几 Mbps 对家用宽带不高，容易出问题的是<strong>晚高峰时跨境线路的上传和丢包</strong>。会议每小时会用掉多少流量，见 <a href="monthly-traffic-estimate.html">一个月需要多少流量</a>。</p>
 <h3>按工作内容拆需求</h3>
 <table>
 <thead>
 <tr>
 <th>工作内容</th>
-<th>最看重</th>
+<th>看重什么</th>
 <th>测的时候看什么</th>
 </tr>
 </thead>
@@ -205,7 +205,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 </table>
 <h3>登月VPN 适合开会吗</h3>
 <p>我们是登月VPN，下面是自报信息。</p>
-<p>登月VPN 的线路按电信、联通、移动分开标注，晚高峰按运营商分别测；你选和自己宽带一致的线路即可：电信选「电信直连」，联通选「联通直连」，移动选「移动直连」。我们的选线标准是丢包不超过 12.5%、没有 1 秒以上卡顿（判断方法见 <a href="stable-vpn-selection.html">稳定 VPN 推荐怎么看</a>）。这个标准是按看网页、看行情这类日常使用定的，和上面微软给企业会议定的目标不是一回事，我们也还没有用会议软件专门测过。</p>
+<p>登月VPN 的线路按电信、联通、移动分开标注，晚高峰按运营商分别测。你选和自己宽带一致的线路即可：电信选「电信直连」，联通选「联通直连」，移动选「移动直连」。我们的选线标准是丢包不超过 12.5%、没有 1 秒以上卡顿（判断方法见 <a href="stable-vpn-selection.html">稳定 VPN 推荐怎么看</a>）。这个标准是按看网页、看行情这类日常使用定的，微软给企业会议定的目标要严格得多，我们也还没有用会议软件专门测过。</p>
 <p>如果你主要拿来开会，建议先买月付，按上面的方法在你的网络上开几场真实会议再决定。每个订阅最多同时在线 3 台设备，电脑加手机够用（<a href="https://dengyue.xyz/terms">服务条款</a>，2026-10-11 核对）。</p>
 <h3>下一步</h3>
 <ul>
