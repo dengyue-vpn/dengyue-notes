@@ -24,10 +24,10 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/ai-ip-marketing/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>多数情况下不值得为标签加钱。</strong> 用 ChatGPT、Claude、Gemini，要的是两件事：出口地区在官方支持名单里，出口 IP 固定不乱跳。一条在日本或韩国的固定 IP 直连线路就满足。</p>
 <p>至于「原生 IP」「住宅 IP」，能核对的只有登记信息、宣告网络和地理库定位三项，三者还可能互相矛盾。拿不出可核对证据的「AI 专用」，就只是一个标签。本文讲怎么核对宣传，不点名任何服务商。</p>
-<h3>用 AI 真正要看的两件事</h3>
+<h3>用 AI 要看的两件事</h3>
 <ol>
 <li><strong>出口地区在名单里。</strong> 日本、韩国同时在 OpenAI、Anthropic、Google（网页、App、API）的官方支持名单里（2026-10-11 核对）。香港不在 OpenAI、Anthropic 的名单里。三家名单对照见 <a href="ai-tools-network-choice.html">ChatGPT、Claude、Gemini 选哪个出口地区</a>。</li>
-<li><strong>出口固定。</strong> 一个固定 IP 比一个轮换的 IP 池更省心。账户和地区规则以平台为准，固定一个出口地区、少来回切换最稳妥。</li>
+<li><strong>出口固定。</strong> 一个固定 IP 比一个轮换的 IP 池更省心。账户和地区规则以平台为准，固定一个出口地区、少来回切换更稳。</li>
 </ol>
 <p>这两件事和「AI 专用」「原生」「住宅」这些标签没有必然关系。</p>
 <h3>宣传里常见的几个词</h3>
@@ -51,7 +51,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <td>住宅 IP</td>
 <td>IP 属于家庭宽带运营商</td>
 <td>地址段登记在哪家运营商名下，地理库把它归成什么类型</td>
-<td>地理库的分类各家不同，标签不是物理证明</td>
+<td>地理库的分类各家不同，标签不能当作物理证明</td>
 </tr>
 <tr>
 <td>机房 IP</td>
@@ -75,7 +75,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li><strong>宣告网络</strong>：实际在互联网上宣告这段地址的网络（ASN），它注册在哪个国家。</li>
 <li><strong>地理库定位</strong>：MaxMind、ipinfo 等商业数据库推算出的位置。</li>
 </ol>
-<p>地理库并不保证准确。MaxMind 的 <a href="https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy">Geolocation accuracy</a> 页面写道：</p>
+<p>地理库不保证准确。MaxMind 的 <a href="https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy">Geolocation accuracy</a> 页面写道：</p>
 <blockquote>
 <p>"It is not possible for us to guarantee 100% geolocation accuracy."</p>
 </blockquote>
