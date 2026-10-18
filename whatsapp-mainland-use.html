@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhatsApp 在大陆使用：连接、验证码和出口地区 | 登月VPN 技术笔记</title>
+<meta name="description" content="WhatsApp 验证码走短信或电话，VPN 管的是 App 能不能联网。官方帮助页怎么说，收不到码先查什么，出口选日本或韩国。">
+<link rel="canonical" href="https://dengyue.xyz/blog/whatsapp-mainland-use/">
+<link rel="icon" href="icon.png" type="image/png">
+<meta name="theme-color" content="#6554f5">
+<style>:root{--purple:#6554f5;--ink:#1f1b2e;--muted:#696377;--line:#e5dff2;--bg:#fbf8f1;--card:#fff}
+@media (prefers-color-scheme: dark){:root{--ink:#ece8f6;--muted:#b5adc8;--line:#3a3550;--bg:#14121c;--card:#1d1a28;--purple:#a99cff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:760px;margin:0 auto;padding:28px 16px 64px}a{color:var(--purple);text-underline-offset:3px}
+nav.top{display:flex;gap:14px;flex-wrap:wrap;font-size:15px}h1{font-size:1.9em;line-height:1.3;margin:.6em 0}h2{margin-top:2em}h3{margin-top:2em}
+table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+.note{background:rgba(101,84,245,.1);padding:10px 14px;border-radius:8px}.muted{color:var(--muted)}
+ul.list{list-style:none;padding:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}ul.list li p{margin:4px 0 0;color:var(--muted);font-size:15px}
+footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:14px}</style>
+</head>
+<body><main>
+<nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
+<h1>WhatsApp 在大陆使用：连接、验证码和出口地区</h1>
+<p class="note">本文原载于<a href="https://dengyue.xyz/blog/whatsapp-mainland-use/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
+<p><strong>WhatsApp 的注册验证码由运营商通过短信或电话送到手机，VPN 负责 App 联网这一段，出口建议选日本或韩国线路，同一个国家固定用。</strong></p>
+<p>下面按官方帮助中心的说法，把注册验证码、收不到码的排查和线路选择分开讲。引用的是 WhatsApp 帮助中心 <a href="https://faq.whatsapp.com/684051319521343/?cms_platform=android">How to register your phone number</a>，本文于 2026-10-18 核对。</p>
+<h3>验证码是怎么送到你手机的</h3>
+<p>官方页面写得很直接：激活账号要注册一个能用的手机号，WhatsApp 会发一个注册码确认这个号码是你的，你必须能通过短信或电话接收。页面还列了几条前提：</p>
+<ul>
+<li>只能注册你本人持有的号码。</li>
+<li>这个号码要能收电话和短信。</li>
+<li>手机上的 WhatsApp 要是最新版本。</li>
+<li>来电拦截的设置、App 和任务清理工具要关掉。</li>
+<li>手机要有可用的移动数据或 Wi-Fi 连接，漫游或信号差时注册可能失败。</li>
+<li>不能用不受支持的号码，页面点名的有 VoIP、免费电话号码、付费增值号码、通用接入号码和座机。</li>
+</ul>
+<p>号码、信号、拦截设置和网络连接都在官方要求里，收不到码时逐项查。</p>
+<h3>收不到码，按官方的顺序查</h3>
+<p>页面给的流程是：号码按完整国际格式输入，等 6 位短信验证码。收不到就点「Didn't receive a code?」，选短信或电话重新要一次，并且等进度条走完再重试，等待时间不固定，通常几分钟。</p>
+<p>几件容易做反的事：</p>
+<ol>
+<li>连续点重发。官方要求等进度条走完再重试，也提醒不要乱猜验证码，会被锁一段时间。</li>
+<li>国际区号选错或少写。选对国家，再按完整国际格式输号码。</li>
+<li>手机装了拦截类 App，短信被当成垃圾信息放进别的文件夹，或者电话被直接挂断。</li>
+<li>用 VoIP 虚拟号码或座机注册，这两类在官方的不支持名单里。</li>
+</ol>
+<h3>联网这一段，出口怎么选</h3>
+<p>注册完成后，聊天、语音和图片靠的是手机和 WhatsApp 服务器之间的网络连接。大陆网络下连接断断续续时，需要一条稳定的代理线路，这时选线路看三件事：延迟低、晚高峰不卡、出口 IP 固定。</p>
+<p>按运营商推荐登月VPN 的线路，日本和韩国都可以，韩国是主推：</p>
+<table>
+<thead>
+<tr>
+<th>你的宽带</th>
+<th>推荐</th>
+<th>也可选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电信</td>
+<td>韩国【电信直连】01</td>
+<td>日本【电信直连】01</td>
+</tr>
+<tr>
+<td>联通</td>
+<td>韩国【联通直连】01</td>
+<td>日本【联通直连】01</td>
+</tr>
+<tr>
+<td>移动</td>
+<td>韩国【移动直连】01</td>
+<td>日本【移动直连】01</td>
+</tr>
+</tbody>
+</table>
+<p>登月VPN 每位客户在每条线路上固定一个出口 IP，不会每次连接换地址。固定一个国家、少来回切换更省事，什么情况下真的需要固定 IP，可以看<a href="static-ip-need.html">什么情况需要固定 IP</a>。</p>
+<h3>注册和平时用，分两步做</h3>
+<ol>
+<li>先连上线路，确认 App 能正常联网。</li>
+<li>再点 Agree and continue，输入号码，等短信或电话。</li>
+</ol>
+<p>验证码由运营商用短信或电话送达。官方提到漫游或网络差时注册可能失败，在境外漫游注册的话，先确认联网正常。</p>
+<h3>手机端怎么设置</h3>
+<p>iPhone 和安卓的客户端设置、订阅导入、报错处理，放在 <a href="https://dengyue.xyz/help">官网帮助中心</a>。iPhone 选客户端的思路见 <a href="iphone-vpn-choice.html">iPhone VPN 怎么选</a>。如果你还同时用 ChatGPT、Claude、Gemini，<a href="ai-tools-network-choice.html">三家 AI 选哪个出口地区</a>里的日本或韩国线路同样适用。</p>
+<p>看全部线路和价格：<a href="https://dengyue.xyz/regions">登月VPN 线路</a>、<a href="https://dengyue.xyz/pricing">套餐与价格</a>。</p>
+</main>
+<footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
+</body></html>
