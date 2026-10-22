@@ -1,25 +1,10 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>直连、中转和专线机场怎么选：先看你的运营商和用途 | 登月VPN 技术笔记</title>
-<meta name="description" content="直连是你直接连到海外服务器，中转是先连一台入口服务器再转出去，专线是入口和出口之间走租用的专用线路。三种各有适合的人，按运营商和用途选。">
-<link rel="canonical" href="https://dengyue.xyz/blog/direct-relay-dedicated/">
-<link rel="icon" href="icon.png" type="image/png">
-<meta name="theme-color" content="#6554f5">
-<style>:root{--purple:#6554f5;--ink:#1f1b2e;--muted:#696377;--line:#e5dff2;--bg:#fbf8f1;--card:#fff}
-@media (prefers-color-scheme: dark){:root{--ink:#ece8f6;--muted:#b5adc8;--line:#3a3550;--bg:#14121c;--card:#1d1a28;--purple:#a99cff}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif}
-main{max-width:760px;margin:0 auto;padding:28px 16px 64px}a{color:var(--purple);text-underline-offset:3px}
-nav.top{display:flex;gap:14px;flex-wrap:wrap;font-size:15px}h1{font-size:1.9em;line-height:1.3;margin:.6em 0}h2{margin-top:2em}h3{margin-top:2em}
-table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
-.note{background:rgba(101,84,245,.1);padding:10px 14px;border-radius:8px}.muted{color:var(--muted)}
-ul.list{list-style:none;padding:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}ul.list li p{margin:4px 0 0;color:var(--muted);font-size:15px}
-footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:14px}</style>
-</head>
-<body><main>
-<nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
+---
+layout: default
+title: "直连、中转和专线机场怎么选：先看你的运营商和用途 | 登月VPN 技术笔记"
+description: "直连是你直接连到海外服务器，中转是先连一台入口服务器再转出去，专线是入口和出口之间走租用的专用线路。三种各有适合的人，按运营商和用途选。"
+canonical: "https://dengyue.xyz/blog/direct-relay-dedicated/"
+---
+{% raw %}
 <h1>直连、中转和专线机场怎么选：先看你的运营商和用途</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/direct-relay-dedicated/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>直连是直接连到海外出口服务器。中转是先连入口服务器，再转发到出口。专线是入口和出口之间走运营商出租的专用线路。哪种合适，主要看你的运营商直连海外顺不顺。</strong></p>
@@ -122,6 +107,4 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <li><strong>想清楚你在意什么。</strong> 在意中间经手方少、出口位置明确，选直连。在意晚高峰体验、能接受多一跳，可以试中转或专线。</li>
 </ol>
 <p>还不清楚机场和 VPN 的区别，可以先看<a href="vpn-airport-difference.html">VPN 和机场有什么区别</a>。用交易所的，按交易所和运营商怎么选线见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>。全部线路见<a href="https://dengyue.xyz/regions">线路页</a>，价格见<a href="https://dengyue.xyz/pricing">套餐页</a>。</p>
-</main>
-<footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
-</body></html>
+{% endraw %}

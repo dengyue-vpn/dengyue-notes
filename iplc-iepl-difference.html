@@ -1,25 +1,10 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPLC 和 IEPL 有什么区别，买机场时需要关注什么 | 登月VPN 技术笔记</title>
-<meta name="description" content="IPLC 和 IEPL 都是运营商卖给企业的国际点对点专线，区别在接口和底层技术。对买机场的人来说，更重要的是专线只管中间一段、宣传难核实。">
-<link rel="canonical" href="https://dengyue.xyz/blog/iplc-iepl-difference/">
-<link rel="icon" href="icon.png" type="image/png">
-<meta name="theme-color" content="#6554f5">
-<style>:root{--purple:#6554f5;--ink:#1f1b2e;--muted:#696377;--line:#e5dff2;--bg:#fbf8f1;--card:#fff}
-@media (prefers-color-scheme: dark){:root{--ink:#ece8f6;--muted:#b5adc8;--line:#3a3550;--bg:#14121c;--card:#1d1a28;--purple:#a99cff}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif}
-main{max-width:760px;margin:0 auto;padding:28px 16px 64px}a{color:var(--purple);text-underline-offset:3px}
-nav.top{display:flex;gap:14px;flex-wrap:wrap;font-size:15px}h1{font-size:1.9em;line-height:1.3;margin:.6em 0}h2{margin-top:2em}h3{margin-top:2em}
-table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
-.note{background:rgba(101,84,245,.1);padding:10px 14px;border-radius:8px}.muted{color:var(--muted)}
-ul.list{list-style:none;padding:0}ul.list li{padding:10px 0;border-bottom:1px solid var(--line)}ul.list li p{margin:4px 0 0;color:var(--muted);font-size:15px}
-footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:14px}</style>
-</head>
-<body><main>
-<nav class="top"><a href="./">登月VPN 技术笔记</a><a href="https://dengyue.xyz/blog/">登月VPN 博客</a><a href="https://dengyue.xyz/pricing">套餐与价格</a></nav>
+---
+layout: default
+title: "IPLC 和 IEPL 有什么区别，买机场时需要关注什么 | 登月VPN 技术笔记"
+description: "IPLC 和 IEPL 都是运营商卖给企业的国际点对点专线，区别在接口和底层技术。对买机场的人来说，更重要的是专线只管中间一段、宣传难核实。"
+canonical: "https://dengyue.xyz/blog/iplc-iepl-difference/"
+---
+{% raw %}
 <h1>IPLC 和 IEPL 有什么区别，买机场时需要关注什么</h1>
 <p class="note">本文原载于<a href="https://dengyue.xyz/blog/iplc-iepl-difference/">登月VPN 博客</a>，内容与后续更新以原文为准。</p>
 <p><strong>IPLC 和 IEPL 都是运营商出租给企业的国际专线。IPLC 是传统传输电路，IEPL 提供以太网接口。买机场时更该关注的是：专线只管中间一段，而且你没法直接核实。</strong></p>
@@ -91,6 +76,4 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font
 <p>没有。登月VPN 的线路全部是<strong>直连</strong>：服务器在线路名所标的国家，你直接连过去，不经过入口服务器，也不走 IPLC 或 IEPL。</p>
 <p>直连的好处是路径上只有一台服务器，出口国家就是线路名上写的那个，中间没有别的服务器经手。直连的难点是受运营商影响大，所以我们<strong>按运营商分线路</strong>：线路名里写着「电信直连」「联通直连」「移动直连」，你选和自己宽带一致的那条就行。比如电信宽带主推韩国【电信直连】01，想要更低延迟可以用香港【电信直连】01。联通宽带主推韩国【联通直连】01，移动宽带主推韩国【移动直连】01。</p>
 <p>所以如果你想要的是「晚高峰稳、出口国家固定」，不一定非要找专线，先试一条和你运营商对得上的直连线路。按交易所和运营商怎么选线，见<a href="exchange-route-choice.html">交易所用户怎么选线路</a>。全部线路见<a href="https://dengyue.xyz/regions">线路页</a>，价格见<a href="https://dengyue.xyz/pricing">套餐页</a>。</p>
-</main>
-<footer>© 2026 登月VPN DENGYUE · 直连交易所，一起登月。 · <a href="https://dengyue.xyz">dengyue.xyz</a></footer>
-</body></html>
+{% endraw %}
